@@ -1,6 +1,8 @@
 package banking.tests;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -11,34 +13,43 @@ public class LoginTest {
     WebDriver driver;
 
     @BeforeClass
-    // Setup method to initialize WebDriver
     public void setup() {
-        // Initialize FirefoxDriver
         System.setProperty("webdriver.gecko.driver", Utils.FIREFOX_PATH);
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
+        driver.get(Utils.BASE_URL);
     }
 
-    @Test
-    public void verifyLogin() {
-        // Step 1: Go to URL
-        driver.get(Utils.BASE_URL);
+    @Test(dataProvider = "loginData", dataProviderClass = Utils.class)
+    public void testLogin(String username, String password) {
+        WebElement userField = driver.findElement(By.name("uid"));
+        WebElement passField = driver.findElement(By.name("password"));
+        WebElement loginBtn = driver.findElement(By.name("btnLogin"));
 
-        // Step 2: Enter valid UserId
-        driver.findElement(By.name("uid")).sendKeys(Utils.USER_NAME);
+        // Clear previous input
+        userField.clear();
+        passField.clear();
 
-        // Step 3: Enter valid Password
-        driver.findElement(By.name("password")).sendKeys(Utils.PASSWORD);
+        // Enter credentials
+        userField.sendKeys(username);
+        passField.sendKeys(password);
+        loginBtn.click();
 
-        // Step 4: Click Login
-        driver.findElement(By.name("btnLogin")).click();
+        // Debug info
+        System.out.println("🔹 Attempting login with Username: " + username + ", Password: " + password);
 
-        // Verification: Check if we landed on Manager home page
+        // Validate login by page title
         String expectedTitle = Utils.EXPECTED_TITLE;
         String actualTitle = driver.getTitle();
 
-        Assert.assertEquals(actualTitle, expectedTitle, "❌ Login Failed!");
-        System.out.println("✅ Login successful. Title matched: " + actualTitle);
+        try {
+            Assert.assertEquals(actualTitle, expectedTitle,
+                    "❌ Login failed for Username: " + username);
+            System.out.println("✅ Login successful for Username: " + username);
+        } catch (AssertionError e) {
+            System.out.println("⚠️ Login test failed for Username: " + username);
+            throw e; // rethrow so TestNG marks it as failed
+        }
     }
 
     @AfterClass

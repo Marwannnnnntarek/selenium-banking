@@ -1,4 +1,40 @@
 -------------------------------------------------------------------------------
 Test set: banking.tests.LoginTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.238 s - in banking.tests.LoginTest
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.764 s <<< FAILURE! - in banking.tests.LoginTest
+testLogin(banking.tests.LoginTest)  Time elapsed: 0.045 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: *[name='uid']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bcfeb518-f9f6-41c5-bf40-2e35d25014f3, findElement {using=name, value=uid}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.1, moz:accessibilityChecks: false, moz:buildID: 20250918214338, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16860, moz:profile: C:\Users\Marwan\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: bcfeb518-f9f6-41c5-bf40-2e35d25014f3
+	at banking.tests.LoginTest.testLogin(LoginTest.java:25)
+
+testLogin(banking.tests.LoginTest)  Time elapsed: 0.023 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: *[name='uid']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bcfeb518-f9f6-41c5-bf40-2e35d25014f3, findElement {using=name, value=uid}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.1, moz:accessibilityChecks: false, moz:buildID: 20250918214338, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16860, moz:profile: C:\Users\Marwan\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: bcfeb518-f9f6-41c5-bf40-2e35d25014f3
+	at banking.tests.LoginTest.testLogin(LoginTest.java:25)
+
+testLogin(banking.tests.LoginTest)  Time elapsed: 0.031 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: *[name='uid']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [bcfeb518-f9f6-41c5-bf40-2e35d25014f3, findElement {using=name, value=uid}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 143.0.1, moz:accessibilityChecks: false, moz:buildID: 20250918214338, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 16860, moz:profile: C:\Users\Marwan\AppData\Loc..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
+Session ID: bcfeb518-f9f6-41c5-bf40-2e35d25014f3
+	at banking.tests.LoginTest.testLogin(LoginTest.java:25)
+

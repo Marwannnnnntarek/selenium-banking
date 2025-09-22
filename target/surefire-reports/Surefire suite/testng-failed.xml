@@ -5,8 +5,8 @@
     <classes>
       <class name="banking.tests.LoginTest">
         <methods>
-          <include name="verifyLogin"/>
           <include name="setup"/>
+          <include name="testLogin" invocation-numbers="1 2 3"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- banking.tests.LoginTest -->

@@ -1,1 +1,3 @@
 banking\tests\LoginTest.class
+banking\tests\Utils.class
+banking\tests\ExcelUtils.class
